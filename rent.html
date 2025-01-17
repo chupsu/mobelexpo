@@ -10,7 +10,7 @@
     <link rel="apple-touch-icon" sizes="152x152" href="./img/content/touch-icon-ipad.png">
     <link rel="apple-touch-icon" sizes="167x167" href="./img/content/touch-icon-ipad-pro.png">
     <link rel="apple-touch-icon" sizes="180x180" href="./img/content/touch-icon-iphone-retina.png">
-    <title>Контакты</title>
+    <title>Аренда</title>
     <link rel="stylesheet" href="./css/style.min.css">
     <script src="./js/script.min.js" defer></script>
   </head>
@@ -66,148 +66,247 @@
       </header>
 
       <main class="page">
-        <section class="contacts _mb">
+        <section class="about _mb">
           <div class="container">
-            <div class="contacts__body">
-              <div class="page-head">
-                <ul class="breadcrumbs">
-                  <li class="breadcrumbs__item">
-                    <a class="breadcrumbs__link" href="./index.html">Главная</a>
-                  </li>
-                  <li class="breadcrumbs__item">
-                    <span class="breadcrumbs__link">Контакты</span>
-                  </li>
-                </ul>
-                <h1 class="page-head__title _h1">Контакты</h1>
-              </div>
-              <div class="contacts__main">
-                <div class="contacts__action">
-                  <a class="contacts__btn btn btn_accent icon-mail" href="#" data-popup="#callback">
-                    Обратная связь
-                  </a>
-                  <a class="contacts__btn btn btn_contour icon-stack" href="./scheme.html">
-                    Схема центра
-                  </a>
-                </div>
-                <div class="contacts__map-box" id="map"></div>
-                <div class="contacts__content">
-                  <div class="list-grid">
-                    <div class="list-grid__box">
-                      <div class="contact-card">
-                        <div class="contact-card__item">
-                          <figure class="contact-card__img-box" aria-hidden="true">
-                            <img class="contact-card__img" src="./img/content/icons/tel.svg" alt="Телефон">
-                          </figure>
-                          <dl class="contact-card__content">
-                            <dt class="contact-card__name">Телефон</dt>
-                            <dd class="contact-card__text">
-                              <a href="tel:+74958033335">+7 (495) 803-33-35</a>
-                            </dd>
-                          </dl>
-                        </div>
-                        <div class="contact-card__item">
-                          <figure class="contact-card__img-box" aria-hidden="true">
-                            <img class="contact-card__img" src="./img/content/icons/time.svg" alt="Режим работы">
-                          </figure>
-                          <dl class="contact-card__content">
-                            <dt class="contact-card__name">Режим работы</dt>
-                            <dd class="contact-card__text">ПН-СБ 10:00 - 21:00, ВС 10:00 - 20:00</dd>
-                          </dl>
-                        </div>
-                        <div class="contact-card__item">
-                          <figure class="contact-card__img-box" aria-hidden="true">
-                            <img class="contact-card__img" src="./img/content/icons/pin.svg" alt="Адрес">
-                          </figure>
-                          <dl class="contact-card__content">
-                            <dt class="contact-card__name">Адрес</dt>
-                            <dd class="contact-card__text">Москва, Нахимовский проспект, 24</dd>
-                          </dl>
-                        </div>
-                      </div>
+            <div class="about__body">
+              <div class="about__media">
+                <div class="about__gallery">
+                  <div class="gallery-slider">
+                    <div class="gallery-slider__items">
+                      <figure class="gallery-slider__item">
+                        <picture><source srcset="./img/content/photo/about-2.webp" type="image/webp"><img class="gallery-slider__img" src="./img/content/photo/about-2.jpg" alt="image"></picture>
+                      </figure>
                     </div>
-                    <div class="list-grid__box">
-                      <div class="contact-path">
-                        <div class="contact-path__item">
-                          <div class="contact-path__head">
-                            <span
-                              class="contact-path__icon"
-                              aria-hidden="true"
-                              style="background-color: #ff6a00"
-                            >
-                              М
-                            </span>
-                            <span class="contact-path__title">«Профсоюзная»</span>
-                          </div>
-                          <p class="contact-path__text">
-                            (10 минут пешком) любые троллейбусы, автобусы 44, 219, остановка
-                            &laquo;Ткацкая фабрика&raquo;.
-                          </p>
-                        </div>
-                        <div class="contact-path__item">
-                          <div class="contact-path__head">
-                            <span
-                              class="contact-path__icon"
-                              aria-hidden="true"
-                              style="background-color: #adabac"
-                            >
-                              М
-                            </span>
-                            <span class="contact-path__title">«Нахимовский проспект»</span>
-                          </div>
-                          <p class="contact-path__text">
-                            (13 минут пешком) любые троллейбусы, автобус 219, остановка
-                            &laquo;Ткацкая фабрика&raquo;.
-                          </p>
-                        </div>
-                      </div>
+                    <div class="gallery-slider__actions">
+                      <div class="gallery-slider__pagination"></div>
+                      <button
+                        class="gallery-slider__button gallery-slider__button_prev icon-left ilink"
+                        type="button"
+                      >
+                        <span class="seo">Следующий слайд</span>
+                      </button>
+                      <button
+                        class="gallery-slider__button gallery-slider__button_next icon-right ilink"
+                        type="button"
+                      >
+                        <span class="seo">Следующий слайд</span>
+                      </button>
                     </div>
                   </div>
                 </div>
-                <script src="https://api-maps.yandex.ru/2.1/?apikey=fe56076b-3bdf-425c-a83d-11dbe30b03b6&lang=ru_RU"></script>
-                <script>
-                  function calculateNewSizeAndOffset() {
-                    var windowWidth = window.innerWidth;
-                    if (windowWidth < 768) {
-                      return { size: [192, 46], offset: [-20, -35], zoom: 13 };
-                    } else {
-                      return { size: [246, 59], offset: [20, 0], zoom: 14.5 };
-                    }
-                  }
-
-                  ymaps.ready(function () {
-                    const map = new ymaps.Map(document.querySelector("#map"), {
-                      center: [55.672428, 37.582709],
-                      zoom: calculateNewSizeAndOffset().zoom,
-                    });
-
-                    const myPlacemark = new ymaps.Placemark(
-                      [55.672428, 37.582709],
-                      {},
-                      {
-                        iconLayout: "default#image",
-                        iconImageHref: "./img/content/icons/map.svg",
-                        iconImageSize: calculateNewSizeAndOffset().size,
-                        iconImageOffset: calculateNewSizeAndOffset().offset,
-                      }
-                    );
-                    map.controls.remove("geolocationControl"); // удаляем геолокацию
-                    map.controls.remove("searchControl"); // удаляем поиск
-                    map.controls.remove("trafficControl"); // удаляем контроль трафика
-                    map.controls.remove("typeSelector"); // удаляем тип
-                    map.controls.remove("fullscreenControl"); // удаляем кнопку перехода в полноэкранный режим
-                    map.controls.remove("zoomControl"); // удаляем контрол зуммирования
-                    map.controls.remove("rulerControl"); // удаляем контрол правил
-                    map.behaviors.disable(["scrollZoom"]); // отключаем скролл карты (опционально)
-                    map.geoObjects.add(myPlacemark);
-
-                    window.addEventListener("resize", function () {
-                      const newSizeAndOffset = calculateNewSizeAndOffset();
-                      map.setZoom(newSizeAndOffset.zoom);
-                      myPlacemark.options.set("iconImageSize", newSizeAndOffset.size);
-                      myPlacemark.options.set("iconImageOffset", newSizeAndOffset.offset);
-                    });
-                  });
-                </script>
+                <div class="about__info about__info_bottom">
+                  <div class="about__action">
+                    <a class="about__btn btn btn btn_accent icon-key" href="#" data-popup="#rent-order">
+                      Оставить заявку на аренду
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="about__main">
+                <div class="about__content">
+                  <ul class="breadcrumbs">
+                    <li class="breadcrumbs__item">
+                      <a class="breadcrumbs__link" href="./index.html">Главная</a>
+                    </li>
+                    <li class="breadcrumbs__item">
+                      <span class="breadcrumbs__link">Аренда</span>
+                    </li>
+                  </ul>
+                  <h1 class="about__title _h2">Аренда</h1>
+                  <p class="about__text">
+                    Предлагаем торговые площади в аренду на Нахимовском проспекте
+                    24 по адекватным ценам. Тысячи посетителей ежедневно &mdash; отличная
+                    возможность увеличить прибыль и повысить узнаваемость бренда.
+                  </p>
+                  <p class="about__text">
+                    В Dekor&amp;Mobel Expo на Нахимовском проспекте аренда площади &mdash;
+                    разумная инвестиция в бизнес. Забронируйте свое место под солнцем в мире мебели,
+                    дизайна и декора. Звоните &mdash; обсудим нюансы &mdash; предоставим
+                    достойный вариант.
+                  </p>
+                  <p class="about__text about__text_accent">
+                    Аренда помещений на Нахимовском проспекте &mdash; это престижно, выгодно
+                    и продуктивно
+                  </p>
+                </div>
+                <div class="about__content">
+                  <h3 class="about__subtitle _h3">Реклама в ТЦ  Dekor&amp;Mobel Expo</h3>
+                  <p class="about__text">
+                    Для продвижения товаров и услуг в комплексе представлены различные форматы
+                    размещения рекламы:
+                  </p>
+                  <ul>
+                    <li>световые панели;</li>
+                    <li>радиореклама;</li>
+                    <li>размещение рекламы на сайте;</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section _mb">
+          <div class="container">
+            <div class="section__body">
+              <!-- если нужны стрелки - убрать style="padding-right: 0" -->
+              <div class="section__head" style="padding-right: 0">
+                <div class="section__head-content">
+                  <h2 class="section__title _h2">Услуги комплекса</h2>
+                </div>
+              </div>
+              <div class="benefits-slider">
+                <div class="benefits-slider__wrapper">
+                  <div class="benefits-slider__items">
+                    <div class="benefits-slider__item">
+                      <figure class="benefits-slider__img-box">
+                        <img class="benefits-slider__img" src="./img/content/icons/coffee.svg" alt="Кафе">
+                      </figure>
+                      <h3 class="benefits-slider__title _h3">Кафе</h3>
+                      <p class="benefits-slider__text">
+                        Для тех, кто проголодался, Dekor&amp;Mobel Expo может предложить отличные кафе,
+                        где можно недорого перекусить.
+                      </p>
+                    </div>
+                    <div class="benefits-slider__item">
+                      <figure class="benefits-slider__img-box">
+                        <img class="benefits-slider__img" src="./img/content/icons/car.svg" alt="Парковка">
+                      </figure>
+                      <h3 class="benefits-slider__title _h3">Парковка</h3>
+                      <p class="benefits-slider__text">
+                        Просторная парковка торгового центра, рассчитана на более 400 мест и способна
+                        вместить транспорт всех наших гостей и арендаторов.
+                      </p>
+                    </div>
+                    <div class="benefits-slider__item">
+                      <figure class="benefits-slider__img-box">
+                        <img class="benefits-slider__img" src="./img/content/icons/battery.svg" alt="Зарядная станция для электромобиля">
+                      </figure>
+                      <h3 class="benefits-slider__title _h3">Зарядная станция для электромобиля</h3>
+                      <p class="benefits-slider__text">
+                        Возле 3-го входа в Mobel Expo расположена станция для зарядки электромобиля.
+                      </p>
+                    </div>
+                    <div class="benefits-slider__item">
+                      <figure class="benefits-slider__img-box">
+                        <img class="benefits-slider__img" src="./img/content/icons/card.svg" alt="Банковские услуги">
+                      </figure>
+                      <h3 class="benefits-slider__title _h3">Банковские услуги</h3>
+                      <p class="benefits-slider__text">
+                        На 1-м этаже Dekor Expo расположен банкомат, где можно снять наличные средства.
+                      </p>
+                    </div>
+                  </div>
+                  <!-- если нужны стрелки - убрать style="display: none" -->
+                  <div class="benefits-slider__actions" style="display: none">
+                    <button
+                      class="benefits-slider__button benefits-slider__button_prev icon-left ilink"
+                      type="button"
+                    >
+                      <span class="seo">Следующий слайд</span>
+                    </button>
+                    <button
+                      class="benefits-slider__button benefits-slider__button_next icon-right ilink"
+                      type="button"
+                    >
+                      <span class="seo">Следующий слайд</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section _mb">
+          <div class="container">
+            <div class="section__body section__body_large-head">
+              <div class="section__head">
+                <div class="section__head-content">
+                  <h2 class="section__title _h2"><b>5 причин</b> арендовать торговую площадь</h2>
+                  <p class="section__text">
+                    Расширяетесь или открываете дело с нуля? Хотите сделать достойную репутацию
+                    компании? Нужно найти новых партнеров? Если вы хоть на один вопрос ответили
+                    &laquo;Да&raquo; &mdash; значит, это место для вас. Плюсы следующие:
+                  </p>
+                </div>
+              </div>
+              <div class="benefits-slider">
+                <div class="benefits-slider__wrapper">
+                  <ol class="benefits-slider__items benefits-slider__items_numeric">
+                    <li class="benefits-slider__item">
+                      <div class="benefits-slider__img-box"></div>
+                      <p class="benefits-slider__text">
+                        На рынке более 15 лет. Получили определенную целевую
+                        аудиторию &mdash; люди со средним (и выше среднего) достатком,
+                        которым требуется сделать ремонт или обновить интерьер в доме. Нет случайных
+                        посетителей.
+                      </p>
+                    </li>
+                    <li class="benefits-slider__item">
+                      <div class="benefits-slider__img-box"></div>
+                      <p class="benefits-slider__text">
+                        Хорошая транспортная развязка. Легко добраться на авто или общественном
+                        транспорте. Две станции метро поблизости (&laquo;Профсоюзная&raquo;,
+                        &laquo;Нахимовский проспект&raquo;) &mdash; до 15 минут пешком.
+                      </p>
+                    </li>
+                    <li class="benefits-slider__item">
+                      <div class="benefits-slider__img-box"></div>
+                      <p class="benefits-slider__text">
+                        Общая площадь &mdash; 25 000 кв. м. Более 200
+                        магазинов &mdash; десятки известных брендов. Высокая посещаемость. Теплые
+                        клиенты.
+                      </p>
+                    </li>
+                    <li class="benefits-slider__item">
+                      <div class="benefits-slider__img-box"></div>
+                      <p class="benefits-slider__text">
+                        Удобные часы работы &mdash; с 10:00 до 21:00. Для жителей
+                        мегаполиса оптимальное время. В будние дни можно заехать после работы,
+                        в выходные &mdash; хорошо выспаться, а потом заняться шопингом.
+                      </p>
+                    </li>
+                  </ol>
+                  <div class="benefits-slider__actions">
+                    <button
+                      class="benefits-slider__button benefits-slider__button_prev icon-left ilink"
+                      type="button"
+                    >
+                      <span class="seo">Следующий слайд</span>
+                    </button>
+                    <button
+                      class="benefits-slider__button benefits-slider__button_next icon-right ilink"
+                      type="button"
+                    >
+                      <span class="seo">Следующий слайд</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="rent-cta _mb">
+          <div class="container">
+            <div class="rent-cta__body">
+              <div class="rent-cta__head">
+                <h2 class="rent-cta__title _h2">Что нужно для аренды на Нахимовском проспекте 24</h2>
+                <a class="rent-cta__btn btn btn btn_light icon-key" href="#" data-popup="#rent-order">
+                  Оставить заявку на аренду
+                </a>
+              </div>
+              <div class="rent-cta__content">
+                <p class="rent-cta__text">
+                  Хотите получить консультацию, узнать о наличии свободных площадей, уточнить цены?
+                  Звоните по телефону <a href="tel:+79636563190">+7 (963) 656 31 90</a> &mdash;
+                  для вас подробная и актуальная информация. Ведите бизнес в одном из самых
+                  посещаемых торговой-выставочных комплексов Москвы.
+                </p>
+                <p class="rent-cta__text">
+                  Оставляйте заявку прямо сейчас &mdash; и наш представитель свяжется
+                  с вами в удобное время. Укажите контактные данные (при желании название
+                  бренда, вид деятельности и желаемую площадь) &mdash; подберем лучшие
+                  предложения.
+                </p>
               </div>
             </div>
           </div>
@@ -413,11 +512,11 @@
         })();
       </script>
     </div>
-    <div class="popup" id="callback">
+    <div class="popup popup_right" id="rent-order">
       <div class="popup__body">
         <div class="popup__inner">
           <div class="popup__head">
-            <h5 class="popup__title _h2">Обратная связь</h5>
+            <h5 class="popup__title _h2">Заявка на аренду</h5>
             <button class="popup__close icon-close" type="button" data-close>
               <span class="seo">Закрыть окно</span>
             </button>
@@ -428,8 +527,41 @@
             <form class="form" action="#">
               <div class="form__inner">
                 <div class="form__body">
+                  <div class="form__item">
+                    <div class="form__label">Название компании <b>*</b></div>
+                    <!-- span class="wpcf7-form-control-wrap полностью заменить инпутом CF7 -->
+                    <!-- в function.php отключить у CF7 вывод лишних <p> и <br> -->
+                    <span class="wpcf7-form-control-wrap">
+                      <input type="text" placeholder="ООО “Компания”" required>
+                    </span>
+                  </div>
+                  <div class="form__item">
+                    <div class="form__label">Сайт <b>*</b></div>
+                    <!-- span class="wpcf7-form-control-wrap полностью заменить инпутом CF7 -->
+                    <!-- в function.php отключить у CF7 вывод лишних <p> и <br> -->
+                    <span class="wpcf7-form-control-wrap">
+                      <input type="text" placeholder="www.site.ru" required>
+                    </span>
+                  </div>
                   <div class="form__item form__item_large">
-                    <div class="form__label">Как к вам обращаться? <b>*</b></div>
+                    <div class="form__label">Какой ассортимент хотите представлять? <b>*</b></div>
+                    <!-- span class="wpcf7-form-control-wrap полностью заменить инпутом CF7 -->
+                    <!-- в function.php отключить у CF7 вывод лишних <p> и <br> -->
+                    <span class="wpcf7-form-control-wrap">
+                      <input type="text" placeholder="Одежда" required>
+                    </span>
+                    <div class="wpcf7-not-valid-tip">Адрес должен соответствовать шаблону my@mail.ru</div>
+                  </div>
+                  <div class="form__item">
+                    <div class="form__label">Телефон <b>*</b></div>
+                    <!-- span class="wpcf7-form-control-wrap полностью заменить инпутом CF7 -->
+                    <!-- в function.php отключить у CF7 вывод лишних <p> и <br> -->
+                    <span class="wpcf7-form-control-wrap">
+                      <input type="tel" placeholder="+7" required>
+                    </span>
+                  </div>
+                  <div class="form__item">
+                    <div class="form__label">Контактное лицо (ФИО) <b>*</b></div>
                     <!-- span class="wpcf7-form-control-wrap полностью заменить инпутом CF7 -->
                     <!-- в function.php отключить у CF7 вывод лишних <p> и <br> -->
                     <span class="wpcf7-form-control-wrap">
@@ -437,24 +569,24 @@
                     </span>
                   </div>
                   <div class="form__item">
-                    <div class="form__label">Адрес эл. почты <b>*</b></div>
+                    <div class="form__label">Площадь, м² <b>*</b></div>
                     <!-- span class="wpcf7-form-control-wrap полностью заменить инпутом CF7 -->
                     <!-- в function.php отключить у CF7 вывод лишних <p> и <br> -->
                     <span class="wpcf7-form-control-wrap">
-                      <input class="wpcf7-not-valid" type="email" placeholder="my@mail.ru" required>
+                      <input type="number" placeholder="от 10м²" min="10" required>
                     </span>
-                    <div class="wpcf7-not-valid-tip">Адрес должен соответствовать шаблону my@mail.ru</div>
                   </div>
                   <div class="form__item">
-                    <div class="form__label">Телефон <b>*</b></div>
+                    <div class="form__label">Помещение под <b>*</b></div>
                     <!-- span class="wpcf7-form-control-wrap полностью заменить инпутом CF7 -->
                     <!-- в function.php отключить у CF7 вывод лишних <p> и <br> -->
-                    <span class="wpcf7-form-control-wrap">
-                      <input type="tel" placeholder="+7" required>
-                    </span>
+                    <select data-modifier="fill" data-speed="0" data-show-selected data-scroll>
+                      <option value="Торговлю" selected>Торговлю</option>
+                      <option value="Вариант 2">Вариант 2</option>
+                    </select>
                   </div>
                   <div class="form__item form__item_large">
-                    <div class="form__label">Ваше сообщение</div>
+                    <div class="form__label">Дополнительная информация</div>
                     <!-- span class="wpcf7-form-control-wrap полностью заменить инпутом CF7 -->
                     <!-- в function.php отключить у CF7 вывод лишних <p> и <br> -->
                     <span class="wpcf7-form-control-wrap">

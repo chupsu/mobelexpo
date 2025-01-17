@@ -10,7 +10,7 @@
     <link rel="apple-touch-icon" sizes="152x152" href="./img/content/touch-icon-ipad.png">
     <link rel="apple-touch-icon" sizes="167x167" href="./img/content/touch-icon-ipad-pro.png">
     <link rel="apple-touch-icon" sizes="180x180" href="./img/content/touch-icon-iphone-retina.png">
-    <title>Контакты</title>
+    <title>Магазины</title>
     <link rel="stylesheet" href="./css/style.min.css">
     <script src="./js/script.min.js" defer></script>
   </head>
@@ -66,148 +66,197 @@
       </header>
 
       <main class="page">
-        <section class="contacts _mb">
+        <section class="catalog _mb">
           <div class="container">
-            <div class="contacts__body">
+            <div class="catalog__body">
               <div class="page-head">
                 <ul class="breadcrumbs">
                   <li class="breadcrumbs__item">
                     <a class="breadcrumbs__link" href="./index.html">Главная</a>
                   </li>
                   <li class="breadcrumbs__item">
-                    <span class="breadcrumbs__link">Контакты</span>
+                    <span class="breadcrumbs__link">Магазины</span>
                   </li>
                 </ul>
-                <h1 class="page-head__title _h1">Контакты</h1>
+
+                <h1 class="page-head__title _h1">Магазины</h1>
               </div>
-              <div class="contacts__main">
-                <div class="contacts__action">
-                  <a class="contacts__btn btn btn_accent icon-mail" href="#" data-popup="#callback">
-                    Обратная связь
-                  </a>
-                  <a class="contacts__btn btn btn_contour icon-stack" href="./scheme.html">
-                    Схема центра
-                  </a>
-                </div>
-                <div class="contacts__map-box" id="map"></div>
-                <div class="contacts__content">
-                  <div class="list-grid">
-                    <div class="list-grid__box">
-                      <div class="contact-card">
-                        <div class="contact-card__item">
-                          <figure class="contact-card__img-box" aria-hidden="true">
-                            <img class="contact-card__img" src="./img/content/icons/tel.svg" alt="Телефон">
-                          </figure>
-                          <dl class="contact-card__content">
-                            <dt class="contact-card__name">Телефон</dt>
-                            <dd class="contact-card__text">
-                              <a href="tel:+74958033335">+7 (495) 803-33-35</a>
-                            </dd>
-                          </dl>
-                        </div>
-                        <div class="contact-card__item">
-                          <figure class="contact-card__img-box" aria-hidden="true">
-                            <img class="contact-card__img" src="./img/content/icons/time.svg" alt="Режим работы">
-                          </figure>
-                          <dl class="contact-card__content">
-                            <dt class="contact-card__name">Режим работы</dt>
-                            <dd class="contact-card__text">ПН-СБ 10:00 - 21:00, ВС 10:00 - 20:00</dd>
-                          </dl>
-                        </div>
-                        <div class="contact-card__item">
-                          <figure class="contact-card__img-box" aria-hidden="true">
-                            <img class="contact-card__img" src="./img/content/icons/pin.svg" alt="Адрес">
-                          </figure>
-                          <dl class="contact-card__content">
-                            <dt class="contact-card__name">Адрес</dt>
-                            <dd class="contact-card__text">Москва, Нахимовский проспект, 24</dd>
-                          </dl>
-                        </div>
+              <div class="catalog-head" data-one-select>
+                <div class="catalog-head__row catalog-head__row_small">
+                  <div class="catalog-head__col">
+                    <div class="catalog-head__items">
+                      <div class="catalog-head__item">
+                        <select data-modifier="medium" data-speed="0" data-show-selected data-scroll>
+                          <option value="Все категории" selected>Все категории</option>
+                          <option value="Мягкая мебель">Мягкая мебель</option>
+                          <option value="Корпусная мебель">Корпусная мебель</option>
+                          <option value="Детская мебель">Детская мебель</option>
+                          <option value="Кухни">Кухни</option>
+                          <option value="Столы и стулья">Столы и стулья</option>
+                          <option value="Кровати и матрасы">Кровати и матрасы</option>
+                          <option value="Предметы интерьера">Предметы интерьера</option>
+                          <option value="Ковры">Ковры</option>
+                          <option value="Текстиль">Текстиль</option>
+                          <option value="Освещение">Освещение</option>
+                          <option value="Электрооборудование">Электрооборудование</option>
+                          <option value="Двери и окна">Двери и окна</option>
+                          <option value="Напольные покрытия">Напольные покрытия</option>
+                          <option value="Плитка и керамогранит">Плитка и керамогранит</option>
+                          <option value="Искусственный и натуральный камень">
+                            Искусственный и натуральный камень
+                          </option>
+                          <option value="Лакокрасочные материалы">Лакокрасочные материалы</option>
+                          <option value="Сантехника">Сантехника</option>
+                          <option value="Вентиляция и кондиционирование">
+                            Вентиляция и кондиционирование
+                          </option>
+                          <option value="Камины">Камины</option>
+                          <option value="Лифты">Лифты</option>
+                        </select>
                       </div>
                     </div>
-                    <div class="list-grid__box">
-                      <div class="contact-path">
-                        <div class="contact-path__item">
-                          <div class="contact-path__head">
-                            <span
-                              class="contact-path__icon"
-                              aria-hidden="true"
-                              style="background-color: #ff6a00"
-                            >
-                              М
-                            </span>
-                            <span class="contact-path__title">«Профсоюзная»</span>
-                          </div>
-                          <p class="contact-path__text">
-                            (10 минут пешком) любые троллейбусы, автобусы 44, 219, остановка
-                            &laquo;Ткацкая фабрика&raquo;.
-                          </p>
-                        </div>
-                        <div class="contact-path__item">
-                          <div class="contact-path__head">
-                            <span
-                              class="contact-path__icon"
-                              aria-hidden="true"
-                              style="background-color: #adabac"
-                            >
-                              М
-                            </span>
-                            <span class="contact-path__title">«Нахимовский проспект»</span>
-                          </div>
-                          <p class="contact-path__text">
-                            (13 минут пешком) любые троллейбусы, автобус 219, остановка
-                            &laquo;Ткацкая фабрика&raquo;.
-                          </p>
-                        </div>
+                  </div>
+                  <div class="catalog-head__col">
+                    <div class="catalog-head__items">
+                      <div class="catalog-head__item">
+                        <form class="search" action="#">
+                          <input class="search__body" type="search" placeholder="Введите название магазина">
+                          <button class="search__btn icon-search" type="submit">
+                            <span class="seo">Искать</span>
+                          </button>
+                        </form>
                       </div>
                     </div>
                   </div>
                 </div>
-                <script src="https://api-maps.yandex.ru/2.1/?apikey=fe56076b-3bdf-425c-a83d-11dbe30b03b6&lang=ru_RU"></script>
-                <script>
-                  function calculateNewSizeAndOffset() {
-                    var windowWidth = window.innerWidth;
-                    if (windowWidth < 768) {
-                      return { size: [192, 46], offset: [-20, -35], zoom: 13 };
-                    } else {
-                      return { size: [246, 59], offset: [20, 0], zoom: 14.5 };
-                    }
-                  }
-
-                  ymaps.ready(function () {
-                    const map = new ymaps.Map(document.querySelector("#map"), {
-                      center: [55.672428, 37.582709],
-                      zoom: calculateNewSizeAndOffset().zoom,
-                    });
-
-                    const myPlacemark = new ymaps.Placemark(
-                      [55.672428, 37.582709],
-                      {},
-                      {
-                        iconLayout: "default#image",
-                        iconImageHref: "./img/content/icons/map.svg",
-                        iconImageSize: calculateNewSizeAndOffset().size,
-                        iconImageOffset: calculateNewSizeAndOffset().offset,
-                      }
-                    );
-                    map.controls.remove("geolocationControl"); // удаляем геолокацию
-                    map.controls.remove("searchControl"); // удаляем поиск
-                    map.controls.remove("trafficControl"); // удаляем контроль трафика
-                    map.controls.remove("typeSelector"); // удаляем тип
-                    map.controls.remove("fullscreenControl"); // удаляем кнопку перехода в полноэкранный режим
-                    map.controls.remove("zoomControl"); // удаляем контрол зуммирования
-                    map.controls.remove("rulerControl"); // удаляем контрол правил
-                    map.behaviors.disable(["scrollZoom"]); // отключаем скролл карты (опционально)
-                    map.geoObjects.add(myPlacemark);
-
-                    window.addEventListener("resize", function () {
-                      const newSizeAndOffset = calculateNewSizeAndOffset();
-                      map.setZoom(newSizeAndOffset.zoom);
-                      myPlacemark.options.set("iconImageSize", newSizeAndOffset.size);
-                      myPlacemark.options.set("iconImageOffset", newSizeAndOffset.offset);
-                    });
-                  });
-                </script>
+              </div>
+              <div class="catalog__main">
+                <hr class="divider" aria-hidden="true">
+                <ul class="catalog__items catalog__items_large">
+                  <li class="catalog__item">
+                    <figure class="catalog__img-box">
+                      <picture><source srcset="./img/content/category/category-1.webp" type="image/webp"><img class="catalog__img" src="./img/content/category/category-1.jpg" alt="Мягкая мебель"></picture>
+                    </figure>
+                    <a class="catalog__btn btn btn_light icon-link" href="./category.html">
+                      <span>Мягкая мебель</span>
+                    </a>
+                  </li>
+                  <li class="catalog__item">
+                    <figure class="catalog__img-box">
+                      <picture><source srcset="./img/content/category/category-2.webp" type="image/webp"><img class="catalog__img" src="./img/content/category/category-2.jpg" alt="Корпусная мебель"></picture>
+                    </figure>
+                    <a class="catalog__btn btn btn_light icon-link" href="./category.html">
+                      <span>Корпусная мебель</span>
+                    </a>
+                  </li>
+                  <li class="catalog__item">
+                    <figure class="catalog__img-box">
+                      <picture><source srcset="./img/content/category/category-3.webp" type="image/webp"><img class="catalog__img" src="./img/content/category/category-3.jpg" alt="Детская мебель"></picture>
+                    </figure>
+                    <a class="catalog__btn btn btn_light icon-link" href="./category.html">
+                      <span>Детская мебель</span>
+                    </a>
+                  </li>
+                  <li class="catalog__item">
+                    <figure class="catalog__img-box">
+                      <picture><source srcset="./img/content/category/category-4.webp" type="image/webp"><img class="catalog__img" src="./img/content/category/category-4.jpg" alt="Кухни"></picture>
+                    </figure>
+                    <a class="catalog__btn btn btn_light icon-link" href="./category.html">
+                      <span>Кухни</span>
+                    </a>
+                  </li>
+                  <li class="catalog__item">
+                    <figure class="catalog__img-box">
+                      <picture><source srcset="./img/content/category/category-5.webp" type="image/webp"><img class="catalog__img" src="./img/content/category/category-5.jpg" alt="Столы и стулья"></picture>
+                    </figure>
+                    <a class="catalog__btn btn btn_light icon-link" href="./category.html">
+                      <span>Столы и стулья</span>
+                    </a>
+                  </li>
+                  <li class="catalog__item">
+                    <figure class="catalog__img-box">
+                      <picture><source srcset="./img/content/category/category-6.webp" type="image/webp"><img class="catalog__img" src="./img/content/category/category-6.jpg" alt="Кровати и матрасы"></picture>
+                    </figure>
+                    <a class="catalog__btn btn btn_light icon-link" href="./category.html">
+                      <span>Кровати и матрасы</span>
+                    </a>
+                  </li>
+                  <li class="catalog__item">
+                    <figure class="catalog__img-box">
+                      <picture><source srcset="./img/content/category/category-7.webp" type="image/webp"><img class="catalog__img" src="./img/content/category/category-7.jpg" alt="Предметы интерьера"></picture>
+                    </figure>
+                    <a class="catalog__btn btn btn_light icon-link" href="./category.html">
+                      <span>Предметы интерьера</span>
+                    </a>
+                  </li>
+                  <li class="catalog__item">
+                    <figure class="catalog__img-box">
+                      <picture><source srcset="./img/content/category/category-8.webp" type="image/webp"><img class="catalog__img" src="./img/content/category/category-8.jpg" alt="Ковры"></picture>
+                    </figure>
+                    <a class="catalog__btn btn btn_light icon-link" href="./category.html">
+                      <span>Ковры</span>
+                    </a>
+                  </li>
+                  <li class="catalog__item">
+                    <figure class="catalog__img-box">
+                      <picture><source srcset="./img/content/category/category-9.webp" type="image/webp"><img class="catalog__img" src="./img/content/category/category-9.jpg" alt="Текстиль"></picture>
+                    </figure>
+                    <a class="catalog__btn btn btn_light icon-link" href="./category.html">
+                      <span>Текстиль</span>
+                    </a>
+                  </li>
+                  <li class="catalog__item">
+                    <figure class="catalog__img-box">
+                      <picture><source srcset="./img/content/category/category-10.webp" type="image/webp"><img class="catalog__img" src="./img/content/category/category-10.jpg" alt="Освещение"></picture>
+                    </figure>
+                    <a class="catalog__btn btn btn_light icon-link" href="./category.html">
+                      <span>Освещение</span>
+                    </a>
+                  </li>
+                  <li class="catalog__item">
+                    <figure class="catalog__img-box">
+                      <picture><source srcset="./img/content/category/category-11.webp" type="image/webp"><img class="catalog__img" src="./img/content/category/category-11.jpg" alt="Электрооборудование"></picture>
+                    </figure>
+                    <a class="catalog__btn btn btn_light icon-link" href="./category.html">
+                      <span>Электрооборудование</span>
+                    </a>
+                  </li>
+                  <li class="catalog__item">
+                    <figure class="catalog__img-box">
+                      <picture><source srcset="./img/content/category/category-12.webp" type="image/webp"><img class="catalog__img" src="./img/content/category/category-12.jpg" alt="Двери и окна"></picture>
+                    </figure>
+                    <a class="catalog__btn btn btn_light icon-link" href="./category.html">
+                      <span>Двери и окна</span>
+                    </a>
+                  </li>
+                </ul>
+                <hr class="divider" aria-hidden="true">
+                <div class="page-action">
+                  <button
+                    class="page-action__btn page-action__btn_more btn btn_light"
+                    type="button"
+                    disabled
+                  >
+                    Загрузить еще
+                  </button>
+                  <div class="page-action__main">
+                    <nav class="pagination">
+                      <ul>
+                        <li>
+                          <a class="page-numbers" href="#">1</a>
+                        </li>
+                        <li>
+                          <span class="page-numbers current">2</span>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
+                  <span
+                    class="page-action__btn page-action__btn_next page-action__btn_disabled btn btn_light icon-right"
+                  >
+                    Вперед
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -412,84 +461,6 @@
           });
         })();
       </script>
-    </div>
-    <div class="popup" id="callback">
-      <div class="popup__body">
-        <div class="popup__inner">
-          <div class="popup__head">
-            <h5 class="popup__title _h2">Обратная связь</h5>
-            <button class="popup__close icon-close" type="button" data-close>
-              <span class="seo">Закрыть окно</span>
-            </button>
-          </div>
-          <div class="popup__content">
-            <!-- <form class="form wpcf7-form sent" action="#"> -->
-            <!-- <form class="form wpcf7-form failed aborted" action="#"> -->
-            <form class="form" action="#">
-              <div class="form__inner">
-                <div class="form__body">
-                  <div class="form__item form__item_large">
-                    <div class="form__label">Как к вам обращаться? <b>*</b></div>
-                    <!-- span class="wpcf7-form-control-wrap полностью заменить инпутом CF7 -->
-                    <!-- в function.php отключить у CF7 вывод лишних <p> и <br> -->
-                    <span class="wpcf7-form-control-wrap">
-                      <input type="text" placeholder="Иванов Иван Сергеевич" required>
-                    </span>
-                  </div>
-                  <div class="form__item">
-                    <div class="form__label">Адрес эл. почты <b>*</b></div>
-                    <!-- span class="wpcf7-form-control-wrap полностью заменить инпутом CF7 -->
-                    <!-- в function.php отключить у CF7 вывод лишних <p> и <br> -->
-                    <span class="wpcf7-form-control-wrap">
-                      <input class="wpcf7-not-valid" type="email" placeholder="my@mail.ru" required>
-                    </span>
-                    <div class="wpcf7-not-valid-tip">Адрес должен соответствовать шаблону my@mail.ru</div>
-                  </div>
-                  <div class="form__item">
-                    <div class="form__label">Телефон <b>*</b></div>
-                    <!-- span class="wpcf7-form-control-wrap полностью заменить инпутом CF7 -->
-                    <!-- в function.php отключить у CF7 вывод лишних <p> и <br> -->
-                    <span class="wpcf7-form-control-wrap">
-                      <input type="tel" placeholder="+7" required>
-                    </span>
-                  </div>
-                  <div class="form__item form__item_large">
-                    <div class="form__label">Ваше сообщение</div>
-                    <!-- span class="wpcf7-form-control-wrap полностью заменить инпутом CF7 -->
-                    <!-- в function.php отключить у CF7 вывод лишних <p> и <br> -->
-                    <span class="wpcf7-form-control-wrap">
-                      <textarea placeholder="Введите текст..."></textarea>
-                    </span>
-                  </div>
-                </div>
-                <div class="form__action">
-                  <div class="form__submit">
-                    <button class="form__btn btn btn_accent icon-link" type="submit">Отправить</button>
-                  </div>
-                  <div class="form__agree">
-                    Нажимая на кнопку вы принимаете условия
-                    <a href="#" target="_blank" rel="nofollow noopener">пользовательского соглашения</a>.
-                    Этот сайт защищен Yandex SmartCaptcha. <br>
-                    <a href="https://yandex.ru/legal/smartcaptcha_notice/" target="_blank" rel="nofollow noopener"
-                      >Условия обработки ваших данных</a>
-                    и
-                    <a href="https://yandex.ru/legal/cloud_terms_smartcaptcha/" target="_blank" rel="nofollow noopener"
-                      >Условия пользования</a>
-                    Yandex
-                  </div>
-                </div>
-                <div class="form__reload">
-                  <a class="form__btn btn btn_accent icon-link" href="#">Отправить еще раз</a>
-                </div>
-                <div class="wpcf7-response-output">
-                  Спасибо за заполнение формы! <br>
-                  Оно успешно отправлено и мы свяжемся с вами в ближайшее время
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
     </div>
   </body>
 </html>
